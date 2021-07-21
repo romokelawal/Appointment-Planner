@@ -4,7 +4,7 @@ export const Tile = ({ contact, deleteContact, appointment, pastAppointments, co
 
   const handleChecked = useCallback ( () => {
     pastAppointments();
-  }, [pastAppointments, completedAppointments])
+  }, [pastAppointments])
 
 	return (
 		<React.Fragment>
