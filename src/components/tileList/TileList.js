@@ -45,10 +45,10 @@ export const TileList = ({
 						<table>
 							<thead>
 								<tr>
-									<td>Title</td>
-									<td>Name</td>
-									<td>Date</td>
-									<td>Time</td>
+									<th>Title</th>
+									<th>Name</th>
+									<th>Date</th>
+									<th>Time</th>
 								</tr>
 							</thead>
 							<tbody>
