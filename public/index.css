@@ -1,12 +1,11 @@
-#root {
-  padding: 30px;
-  font-family: "Open Sans", sans-serif;
+body {
+  padding-top: 30px;
 }
 
 nav > a {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 18px;
   color: #000000;
   margin-right: 30.5px;
   text-decoration-line: none;
@@ -14,12 +13,19 @@ nav > a {
 
 nav > a.active {
   text-decoration-line: underline;
+  color: #03a8d8;
+}
+
+.form-control:focus, .form-select:focus {
+  box-shadow: none !important;
+  border-color: #03a8d8 !important;
 }
 
 nav {
   padding-bottom: 20px;
   border-bottom: 1px solid #979797;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 h2 {
@@ -30,13 +36,19 @@ h2 {
   margin-bottom: 18px;
 }
 
-section {
-}
-
 hr {
   border: none;
   border-top: 1px solid #979797;
   margin: 20px 0;
+}
+
+td a {
+  color: #03a8d8;
+  transition: .3s ease;
+}
+
+td a:hover, nav > a:hover {
+  color: #069bc7;
 }
 
 input[type="submit"] {
@@ -52,31 +64,16 @@ input[type="submit"] {
   font-family: "Open Sans", sans-serif;
   margin-top: 10px;
   margin-bottom: 0px;
+  transition: .3s ease;
 }
 
-input,
-select {
-  font-family: "Open Sans", sans-serif;
-  background: #ffffff;
-  border: 1px solid #979797;
-  border-radius: 4px;
-  padding: 7px 9.5px 9px 9.5px;
-  outline: none;
-  width: 100%;
-  margin-bottom: 10px;
-  box-sizing: border-box;
+input[type="submit"]:hover, button:hover {
+  background-color: #069bc7 !important;
 }
 
-.tile {
-  margin: 0;
-  font-size: 14px;
-  margin-bottom: 4px;
+button {
+  background: #03a8d8 !important;
+  border-color: #03a8d8 !important;
 }
 
-.tile.tile-title {
-  font-weight: bold;
-}
 
-.tile-container {
-  margin-bottom: 20px;
-}

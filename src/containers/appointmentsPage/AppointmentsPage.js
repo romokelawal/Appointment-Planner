@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { AppointmentForm } from '../../components/appointmentForm/AppointmentForm';
-import { PastAppointments } from '../../components/pastAppointments/PastAppointments';
-import { TileList } from '../../components/tileList/TileList';
+import { AppointmentForm } from '../../components/appointment/appointmentForm/AppointmentForm';
+import { PastAppointmentsTable } from '../../components/pastAppointments/pastAppointmentsTable/PastAppointmentsTable';
+import { AppointmentTable } from '../../components/appointment/appointmentTable/AppointmentTable';
 
 export const AppointmentsPage = ({
 	contacts,
@@ -17,7 +17,7 @@ export const AppointmentsPage = ({
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		
+
 		const appointmentData = {
 			title: title,
 			contact: contact,
@@ -49,14 +49,14 @@ export const AppointmentsPage = ({
 			</section>
 			<hr />
 			<section>
-				<TileList
+				<AppointmentTable
 					appointmentsArray={appointments}
 					pastAppointments={pastAppointments}
 					completedAppointments={completedAppointments}
 				/>
 			</section>
 			<section>
-				{completedAppointments.length > 0 && <PastAppointments completedAppointments={completedAppointments} />}
+				{completedAppointments.length > 0 && <PastAppointmentsTable completedAppointments={completedAppointments} />}
 			</section>
 		</div>
 	);

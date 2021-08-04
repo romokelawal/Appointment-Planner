@@ -1,11 +1,12 @@
 import React from 'react';
-import { PastAppointment } from '../pastAppointment/PastAppointment';
+import { Appointment } from '../../appointment/appointment/Appointment';
+import Table from 'react-bootstrap/Table';
 
-export const PastAppointments = ({ completedAppointments }) => {
+export const PastAppointmentsTable = ({ completedAppointments }) => {
 	return (
 		<div>
 			<h3>Past Appointments</h3>
-			<table>
+			<Table striped bordered>
 				<thead>
 					<tr>
 						<td>Title</td>
@@ -16,10 +17,10 @@ export const PastAppointments = ({ completedAppointments }) => {
 				</thead>
 				<tbody>
 					{completedAppointments.map((completedAppointment, index) => {
-						return <PastAppointment key={index} completedAppointment={completedAppointment} />;
+						return <Appointment key={index} appointment={completedAppointment} />;
 					})}
 				</tbody>
-			</table>
+			</Table>
 		</div>
 	);
 };

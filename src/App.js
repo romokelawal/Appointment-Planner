@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Switch, Route, Redirect, NavLink } from "react-router-dom";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import './App.css';
 
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
@@ -25,7 +28,7 @@ function App() {
 
     const deleteContact = (contactIndex) => {
       setContacts(prev => {
-        return contacts.filter((contact, index) => index !== contactIndex);
+        return contacts.filter((_, index) => index !== contactIndex);
       })
     }
 
@@ -48,7 +51,10 @@ function App() {
 
   return (
     <>
-      <nav>
+      <Container>
+        <Row>
+          <Col md={{ span: 10, offset: 1 }} sm={12}>
+            <nav>
         <NavLink to={ROUTES.CONTACTS} activeClassName="active">
           Contacts
         </NavLink>
@@ -57,7 +63,7 @@ function App() {
         </NavLink>
       </nav>
       <main>
-        <Switch>
+          <Switch>
           <Route exact path="/">
             <Redirect to={ROUTES.CONTACTS} />
           </Route>
@@ -69,8 +75,13 @@ function App() {
             {/* Add props to AppointmentsPage */}
             <AppointmentsPage contacts={contacts} appointments={appointments} addAppointment={addAppointment} pastAppointments={pastAppointments} completedAppointments={completedAppointments} />
           </Route>
-        </Switch>
+        </Switch>        
       </main>
+          </Col>
+        </Row>
+        
+      </Container>
+      
     </>
   );
 }

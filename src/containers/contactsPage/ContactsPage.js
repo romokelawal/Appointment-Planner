@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ContactForm } from '../../components/contactForm/ContactForm';
-import { TileList } from '../../components/tileList/TileList';
+import { ContactForm } from '../../components/contact/contactForm/ContactForm';
+import { ContactTable } from '../../components/contact/contactTable/ContactTable';
 
 export const ContactsPage = ({ contacts, addContact, deleteContact }) => {
 	
@@ -45,7 +45,7 @@ export const ContactsPage = ({ contacts, addContact, deleteContact }) => {
 			</section>
 			<hr />
 			<section>
-				<TileList contactsArray={contacts} deleteContact={deleteContact} /> 
+				<ContactTable contactsArray={contacts} deleteContact={deleteContact} /> 
 			</section>
 		</div>
 	);
