@@ -5,7 +5,9 @@ export const AppointmentCheckbox = ({ handleChecked }) => {
 	return (
 		<React.Fragment>
 			<td>
-				<Button id="appointmentChecked" onClick={handleChecked} />
+				<Button id="appointmentChecked" onClick={handleChecked}>
+					Done
+				</Button>
 			</td>
 		</React.Fragment>
 	);
