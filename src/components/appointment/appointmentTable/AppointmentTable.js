@@ -14,7 +14,7 @@ export const AppointmentTable = ({ appointmentsArray, pastAppointments, complete
 							<th>Name</th>
 							<th>Date</th>
 							<th>Time</th>
-							<th>Completed</th>
+							<th>Done</th>
 						</tr>
 					</thead>
 					<tbody>
