@@ -1,5 +1,5 @@
 import React from 'react';
-import { Appointment } from '../appointment/Appointment'
+import { Appointment } from '../appointment/Appointment';
 import Table from 'react-bootstrap/Table';
 
 export const AppointmentTable = ({ appointmentsArray, pastAppointments, completedAppointments }) => {
@@ -14,7 +14,7 @@ export const AppointmentTable = ({ appointmentsArray, pastAppointments, complete
 							<th>Name</th>
 							<th>Date</th>
 							<th>Time</th>
-							<th></th>
+							<th>Completed</th>
 						</tr>
 					</thead>
 					<tbody>
